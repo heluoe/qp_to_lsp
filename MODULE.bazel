@@ -1,0 +1,18 @@
+###############################################################################
+# Bazel now uses Bzlmod by default to manage external dependencies.
+# Please consider migrating your external dependencies from WORKSPACE to MODULE.bazel.
+#
+# For more details, please check https://github.com/bazelbuild/bazel/issues/18958
+###############################################################################
+
+bazel_dep(name = "aspect_bazel_lib", version = "2.21.1")
+
+# bazel_dep(name = "osqp-eigen", version = "0.10.0")
+bazel_dep(name = "googletest", version = "1.17.0")
+# bazel_dep(name = "eigen", version = "3.4.0", sha256 = "sha256-66Pz1BTS+MuikZx47G2qsI/HG6K6SuUCt+XU2Z/ALNo=")
+
+third_party_deps = use_extension("//third_party:dependencies.bzl", "third_party_deps")
+
+use_repo(third_party_deps, "eigen")
+use_repo(third_party_deps, "osqp")
+use_repo(third_party_deps, "osqp_eigen")

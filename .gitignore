@@ -1,0 +1,7 @@
+# bazel files
+user.bazelrc
+bazel-*
+MODULE.bazel.lock
+
+# IDE specific files
+.vscode
