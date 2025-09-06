@@ -14,13 +14,15 @@ papers 参考论文pdf
 
 ## 代码运行
 
+参考论文详情：
 [qp_solver](https://zhuanlan.zhihu.com/p/1938906212096775921)
 
 ```bazel
 bazel test --test_output=all //qp_solver:all
 ```
 
-[lsp]()
+参考论文详情：
+[lsp](https://zhuanlan.zhihu.com/p/1944110476905645126)
 
 
 ```bazel

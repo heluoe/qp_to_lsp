@@ -1,8 +1,9 @@
 cc_library(
     name = "regularized_least_squares_solver",
     hdrs = [
-            "regularized_least_squares_solver.h", 
             "defintions.h",
+            "elden_regularizer_bidiag_solver.hpp",
+            "regularized_least_squares_solver.h", 
         ],
     srcs = ["regularized_least_squares_solver.cpp"],
     deps = [

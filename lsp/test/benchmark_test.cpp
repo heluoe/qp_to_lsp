@@ -94,7 +94,7 @@ static void BM_QR(benchmark::State& state)
         state.counters["Residual"] = residual;
     }
 }
-BENCHMARK(BM_QR)->Args({100, 10})->Args({1000, 100})->Unit(benchmark::kMillisecond);
+BENCHMARK(BM_QR)->Args({100, 10})->Args({1000, 100})->Args({1000, 300})->Unit(benchmark::kMillisecond);
 BENCHMARK(BM_QR)->Iterations(20)->Args({10000, 1000})->Unit(benchmark::kMillisecond);
 
 // ---------------- Elden LSP  ----------------
@@ -118,7 +118,7 @@ static void BM_RLSP(benchmark::State& state)
         state.counters["Residual"] = residual;
     }
 }
-BENCHMARK(BM_RLSP)->Args({100, 10, 100})->Args({1000, 100, 10})->Unit(benchmark::kMillisecond);
+BENCHMARK(BM_RLSP)->Args({100, 10, 100})->Args({1000, 100, 10})->Args({1000, 300, 10})->Unit(benchmark::kMillisecond);
 BENCHMARK(BM_RLSP)->Iterations(20)->Args({10000, 1000, 1})->Unit(benchmark::kMillisecond);
 
 BENCHMARK_MAIN();
